@@ -5,8 +5,8 @@ using namespace std;
 
 int main() {
 #ifndef ONLINE_JUDGE
-  freopen("input.txt", "r", stdin);
-  // freopen("output.txt","w",stdout);
+  (void)!freopen("input.txt", "r", stdin);
+  // (void)!freopen("output.txt","w",stdout);
 #endif
 
   double x1, y1, x2, y2, x3, y3, x4, y4;

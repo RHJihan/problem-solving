@@ -43,8 +43,8 @@ void merge_sort(vector<long long> &arr, long long l, long long r) {
 
 int main() {
 #ifndef ONLINE_JUDGE
-  freopen("input.txt", "r", stdin);
-  // freopen("output.txt","w",stdout);
+  (void)!freopen("input.txt", "r", stdin);
+  // (void)!freopen("output.txt","w",stdout);
 #endif
 
   long long n;

@@ -9,8 +9,8 @@ bool isGood(char c) { return good_list.find(c) != good_list.end(); }
 
 int main() {
 #ifndef ONLINE_JUDGE
-  freopen("input.txt", "r", stdin);
-// freopen("output.txt","w",stdout);
+  (void)!freopen("input.txt", "r", stdin);
+// (void)!freopen("output.txt","w",stdout);
 #endif
 
   string good;

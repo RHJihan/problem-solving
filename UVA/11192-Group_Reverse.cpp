@@ -14,8 +14,8 @@ void reverse_group(string &str, int start, int end) {
 
 int main() {
 #ifndef ONLINE_JUDGE
-  freopen("input.txt", "r", stdin);
-  // freopen("output.txt","w",stdout);
+  (void)!freopen("input.txt", "r", stdin);
+  // (void)!freopen("output.txt","w",stdout);
 #endif
 
   while (true) {
