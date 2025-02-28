@@ -1,0 +1,33 @@
+{
+	"Default C++ File Template": {
+	  "prefix": "#inc", 
+	  "body": [
+		"#include <iostream>",
+		"using namespace std;",
+		"",
+		"int main() {",
+		"#ifndef ONLINE_JUDGE",
+        "freopen(\"input.txt\", \"r\", stdin);",
+        "  // freopen(\"output.txt\",\"w\",stdout);",
+        "#endif",
+		"  ",
+		"  ",
+		"  ",
+		"  return 0;",
+		"}"
+	  ],
+	  "description": "Default template for C++ files"
+	},
+	"ONLINE_JUDGE input and output": {
+	  "prefix": "#if", 
+	  "body": [
+		"#ifndef ONLINE_JUDGE",
+        "freopen(\"input.txt\", \"r\", stdin);",
+        "  // freopen(\"output.txt\",\"w\",stdout);",
+        "#endif",
+		"  "
+	  ],
+	  "description": "ONLINE_JUDGE input and output"
+	}
+  }
+  
