@@ -3,7 +3,7 @@
 #include <vector>
 using namespace std;
 
-vector<int> bfs(vector<vector<int>> &adjacency_list, int start_node) {
+vector<int> Breadth_First_Search(vector<vector<int>> &adjacency_list, int start_node) {
   vector<int> traversal_sequence;
 
   queue<int> queue;
@@ -31,13 +31,26 @@ vector<int> bfs(vector<vector<int>> &adjacency_list, int start_node) {
 }
 
 int main() {
+#ifndef ONLINE_JUDGE
+  (void)!freopen("/home/jihan/Documents/problem-solving/input.txt", "r", stdin);
+  // (void)!freopen("/home/jihan/Documents/problem-solving/output.txt","w", stdout);
+#endif
 
-  vector<vector<int>> adjacency_list = {{2, 3, 1}, {0}, {0, 4}, {0}, {2}};
+  int n, m;
+  cin >> n >> m;
+  vector<vector<int>> adjacency_list(n + 1);
+
+  for (int i = 0; i < m; i++) {
+    int u, v;
+    cin >> u >> v;
+    adjacency_list[u].push_back(v);
+  }
+
   int start_node = 0;
-  vector<int> traversal_sequence = bfs(adjacency_list, start_node);
+  vector<int> result = Breadth_First_Search(adjacency_list, start_node);
 
-  for (int i = 0; i < (int)traversal_sequence.size(); i++) {
-    cout << traversal_sequence[i] << " ";
+  for (int i = 0; i < (int)result.size(); i++) {
+    cout << result[i] << " ";
   }
   return 0;
 }

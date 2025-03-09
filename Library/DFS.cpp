@@ -4,26 +4,44 @@ using namespace std;
 
 vector<vector<int>> adjacency_list;
 vector<bool> visited;
+vector<int> traversal_sequence;
 
-void dfs(int node) {
+void Depth_First_Search(int node) {
   visited[node] = true;
-  cout << node << " ";
+  traversal_sequence.push_back(node);
   vector<int> current = adjacency_list[node];
   for (auto it = current.begin(); it != current.end(); it++) {
     if (!visited[*it]) {
-      dfs(*it);
+      Depth_First_Search(*it);
     }
   }
 }
 
 int main() {
-  adjacency_list = {{1, 2}, {0, 2}, {0, 1, 3}, {3}};
+#ifndef ONLINE_JUDGE
+  (void)!freopen("/home/jihan/Documents/problem-solving/input.txt", "r", stdin);
+  // (void)!freopen("/home/jihan/Documents/problem-solving/output.txt","w", stdout);
+#endif
 
-  adjacency_list.resize(4);
-  visited.resize(4, false);
-  int start_node = 2;
+  int n, m;
+  cin >> n >> m;
 
-  dfs(start_node);
+  adjacency_list.resize(n + 1);
+  visited.resize(n, false);
+
+  for (int i = 0; i < m; i++) {
+    int u, v;
+    cin >> u >> v;
+    adjacency_list[u].push_back(v);
+  }
+
+  int start_node = 0;
+
+  Depth_First_Search(start_node);
+
+  for (int i = 0; i < (int)traversal_sequence.size(); i++) {
+    cout << traversal_sequence[i] << " ";
+  }
 
   return 0;
 }
