@@ -28,8 +28,8 @@ bool possible(string &s, set<string> &string_list_unique) {
 
 int main() {
 #ifndef ONLINE_JUDGE
-  (void)!freopen("/home/jihan/Documents/problem-solving/input.txt", "r", stdin);
-  // (void)!freopen("/home/jihan/Documents/problem-solving/output.txt","w", stdout);
+  (void)!freopen("input.txt", "r", stdin);
+  // (void)!freopen("output.txt","w", stdout);
 #endif
 
   int t;

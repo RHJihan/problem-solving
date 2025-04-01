@@ -31,8 +31,8 @@ int bfs(const vector<vector<int>> &adjacency_list, int start, int end) {
 
 int main() {
 #ifndef ONLINE_JUDGE
-  (void)!freopen("/home/jihan/Documents/problem-solving/input.txt", "r", stdin);
-  // (void)!freopen("/home/jihan/Documents/problem-solving/output.txt","w", stdout);
+  (void)!freopen("input.txt", "r", stdin);
+  // (void)!freopen("output.txt","w", stdout);
 #endif
 
   int test_case = 1;
