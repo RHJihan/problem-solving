@@ -1,6 +1,6 @@
 {
     "code-runner.executorMap": {
-        "cpp": "g++ -g -Wall -Wextra -Wshadow -Wfloat-equal -pedantic -std=c++17 -O2 -Wformat=2 -Wconversion -Wno-sign-conversion -lm $dir/$fileName -o $fileNameWithoutExt.out && ./$fileNameWithoutExt.out"
+        "cpp": "g++ -g -Wall -Wextra -Wshadow -Wfloat-equal -pedantic -std=c++17 -O2 -Wformat=2 -Wconversion -Wno-sign-conversion -lm $dir/$fileName -o $fileNameWithoutExt.out && ./$fileNameWithoutExt.out && rm $fileNameWithoutExt.out"
     },
     "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: LLVM, ColumnLimit: 0 }",
     "files.associations": {
