@@ -3,7 +3,6 @@
 #include <queue>
 #include <set>
 #include <sstream>
-#include <string>
 #include <vector>
 using namespace std;
 
@@ -51,9 +50,10 @@ int main() {
           const string &current = *it;
           if (!transformation.count(current) && u.length() == current.length()) {
             int diff = 0;
-            for (size_t j = 0; j < u.length(); ++j)
-              if (u[j] != current[j])
+            for (int j = 0; j < (int)u.length(); j++)
+              if (u[j] != current[j]) {
                 diff++;
+              }
 
             if (diff == 1) {
               transformation[current] = transformation[u] + 1;
