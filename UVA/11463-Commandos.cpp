@@ -41,7 +41,7 @@ int main() {
 
     vector<vector<int>> adjacency_list(n);
 
-    for (int i = 0; i < m; ++i) {
+    for (int i = 0; i < m; i++) {
       int u, v;
       cin >> u >> v;
       adjacency_list[u].push_back(v);
@@ -61,8 +61,7 @@ int main() {
       max_time = max(max_time, time_to_complete_task);
     }
 
-    cout << "Case " << case_num << ": " << max_time << endl;
-    case_num++;
+    cout << "Case " << case_num++ << ": " << max_time << endl;
   }
 
   return 0;
