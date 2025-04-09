@@ -450,3 +450,6 @@ $RECYCLE.BIN/
 
 input.txt
 output.txt
+
+# Ignore root-level tmp directory and everything in it
+/sandbox/
