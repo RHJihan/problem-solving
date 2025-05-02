@@ -1,0 +1,25 @@
+#include <algorithm>
+#include <iostream>
+#include <vector>
+using namespace std;
+
+vector<int> sortedSquares(vector<int> &nums) {
+
+  for (int i = 0; i < (int)nums.size(); i++) {
+    nums[i] = nums[i] * nums[i];
+  }
+  sort(nums.begin(), nums.end());
+
+  return nums;
+}
+
+int main() {
+  vector<int> nums = {-4, -1, 0, 3, 10};
+  vector<int> result = sortedSquares(nums);
+
+  for (int i = 0; i < (int)nums.size(); i++) {
+    cout << nums[i] << " ";
+  }
+
+  return 0;
+}
