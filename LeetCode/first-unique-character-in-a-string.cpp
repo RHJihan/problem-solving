@@ -9,7 +9,7 @@ int firstUniqChar(string s) {
     freq[s[i]]++;
   }
 
-  for (int i = 0; i < (int) s.size(); i++) {
+  for (int i = 0; i < (int)s.size(); i++) {
     if (freq[s[i]] == 1) {
       return i;
     }
@@ -19,11 +19,6 @@ int firstUniqChar(string s) {
 }
 
 int main() {
-#ifndef ONLINE_JUDGE
-  (void)!freopen("input.txt", "r", stdin);
-  // (void)!freopen("output.txt","w", stdout);
-#endif
-
   cout << firstUniqChar("leetcode") << endl;
   return 0;
 }

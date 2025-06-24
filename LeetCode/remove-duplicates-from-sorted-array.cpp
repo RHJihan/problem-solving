@@ -28,11 +28,6 @@ int removeDuplicates(vector<int> &nums) {
 }
 
 int main() {
-#ifndef ONLINE_JUDGE
-  (void)!freopen("input.txt", "r", stdin);
-  // (void)!freopen("output.txt","w", stdout);
-#endif
-
   vector<int> nums = {1, 1, 1, 2, 2, 5, 5, 6, 6, 7};
   cout << removeDuplicates(nums) << endl;
 

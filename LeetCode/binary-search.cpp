@@ -17,28 +17,14 @@ int binary_search(const vector<int> &nums, int target, int left, int right) {
 }
 
 int search(vector<int> &nums, int target) {
-  return binary_search(nums, target, 0, nums.size() - 1);
+  return binary_search(nums, target, 0, (int) nums.size() - 1);
 }
 
 int main() {
-#ifndef ONLINE_JUDGE
-  (void)!freopen("input.txt", "r", stdin);
-  // (void)!freopen("output.txt","w", stdout);
-#endif
+  vector<int> nums = {-1, 0, 3, 5, 9, 12};
+  int target = 9;
 
-  int n;
-  cin >> n;
-  vector<int> arr(n);
-
-  for (int i = 0; i < n; i++) {
-    cin >> arr[i];
-  }
-
-  int find;
-  cin >> find;
-
-  int index = search(arr, find);
-  cout << "found at index: " << index << endl;
+  cout << search(nums, target) << endl;
 
   return 0;
 }

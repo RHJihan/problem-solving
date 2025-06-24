@@ -34,11 +34,6 @@ bool isIsomorphic(string s, string t) {
 }
 
 int main() {
-#ifndef ONLINE_JUDGE
-  (void)!freopen("input.txt", "r", stdin);
-  // (void)!freopen("output.txt","w", stdout);
-#endif
-
   string s = "foo", t = "bar";
   if (isIsomorphic(s, t)) {
     cout << "true" << endl;
