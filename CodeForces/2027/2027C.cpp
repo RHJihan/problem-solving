@@ -15,10 +15,10 @@ signed main() {
   while (t--) {
     int n;
     cin >> n;
-    map<int, int> visited;
-    set<pair<int, int>> t;
+    map<long long, long long> visited;
+    set<pair<long long, long long>> t;
     for (int i = 0; i < n; i++) {
-      int x;
+      long long x;
       cin >> x;
       x += i;
       if (x < n) {
@@ -29,7 +29,7 @@ signed main() {
     }
 
     visited[n] = 1;
-    int ans = n;
+    long long ans = n;
     for (auto [x, d] : t) {
       if (visited.find(x) != visited.end()) {
         ans = max(ans, x + d);
