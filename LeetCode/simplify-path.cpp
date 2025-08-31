@@ -1,0 +1,38 @@
+#include <iostream>
+#include <sstream>
+#include <vector>
+using namespace std;
+
+class Solution {
+public:
+  string simplifyPath(string path) {
+    vector<string> st;
+    stringstream ss(path);
+    string comp;
+    while (getline(ss, comp, '/')) {
+      if (comp == "" || comp == ".") {
+        continue;
+      }
+
+      if (comp == "..") {
+        if (!st.empty()) {
+          st.pop_back();
+        }
+      } else {
+        st.push_back(comp);
+      }
+    }
+
+    stringstream result;
+    for (string s : st) {
+      result << "/" << s;
+    }
+
+    return result.str().empty() ? "/" : result.str();
+  }
+};
+
+int main() {
+
+  return 0;
+}
