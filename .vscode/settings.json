@@ -95,6 +95,9 @@
         "typeinfo": "cpp",
         "valarray": "cpp",
         "variant": "cpp",
-        "queue": "cpp"
+        "queue": "cpp",
+        "generator": "cpp",
+        "print": "cpp",
+        "text_encoding": "cpp"
     }
 }
