@@ -1,0 +1,8 @@
+SELECT (
+    SELECT MAX(num)
+    FROM MyNumbers
+    GROUP BY num
+    HAVING COUNT(num) = 1
+    ORDER BY num DESC
+    limit 1
+) AS num;
