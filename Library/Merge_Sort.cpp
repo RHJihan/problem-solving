@@ -17,9 +17,9 @@ void merge(vector<int> &arr, int l, int m, int r) {
     tmpRight[i] = arr[m + 1 + i];
   }
 
-  int i, j, k;
+  int i = 0, j = 0, k = l;
 
-  for (i = 0, j = 0, k = l; k <= r; k++) {
+  while (k <= r) {
     if ((i < left) && (j >= right || tmpLeft[i] <= tmpRight[j])) {
       arr[k] = tmpLeft[i];
       i++;
@@ -27,6 +27,7 @@ void merge(vector<int> &arr, int l, int m, int r) {
       arr[k] = tmpRight[j];
       j++;
     }
+    k++;
   }
 }
 
