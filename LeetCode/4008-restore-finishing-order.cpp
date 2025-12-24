@@ -1,0 +1,15 @@
+class Solution {
+public:
+    vector<int> recoverOrder(vector<int>& order, vector<int>& friends) {
+        set<int> st(friends.begin(), friends.end());
+        vector<int> result;
+
+        for (int num : order) {
+            if (st.count(num)) {
+                result.push_back(num);
+            }
+        }
+
+        return result;
+    }
+};
