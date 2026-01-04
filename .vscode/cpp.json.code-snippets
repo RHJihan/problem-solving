@@ -13,7 +13,8 @@
 		"  ",
 		"  ",
 		"  return 0;",
-		"}"
+		"}",
+		""
 	  ],
 	  "description": "Default template for C++ files"
 	},
